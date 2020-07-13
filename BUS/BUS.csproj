@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OrderBUS.cs" />
     <Compile Include="PetBUS.cs" />
+    <Compile Include="TypeBUS.cs" />
     <Compile Include="UserBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -11,5 +11,7 @@ namespace DTO
         public int ID { get; set; }
         public PetDTO Pet { get; set; }
         public UserDTO User { get; set; }
+        public int Amount { get; set; }
+        public decimal TotalPrice { get; set; }
     }
 }

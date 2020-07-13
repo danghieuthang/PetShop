@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConection.cs" />
+    <Compile Include="OrderDAO.cs" />
     <Compile Include="PetDAO.cs" />
+    <Compile Include="TypeDAO.cs" />
     <Compile Include="UserDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

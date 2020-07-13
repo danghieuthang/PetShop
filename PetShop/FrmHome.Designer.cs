@@ -67,6 +67,7 @@
             this.btnLogout.TabIndex = 5;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnHistory
             // 
@@ -80,6 +81,7 @@
             this.btnHistory.TabIndex = 4;
             this.btnHistory.Text = "History";
             this.btnHistory.UseVisualStyleBackColor = false;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // btnCart
             // 
@@ -93,6 +95,7 @@
             this.btnCart.TabIndex = 3;
             this.btnCart.Text = "Cart";
             this.btnCart.UseVisualStyleBackColor = false;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // btnShop
             // 
@@ -120,6 +123,7 @@
             this.btnUser.TabIndex = 0;
             this.btnUser.Text = "Profile";
             this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // panel2
             // 
@@ -127,14 +131,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(200, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(931, 52);
+            this.panel2.Size = new System.Drawing.Size(966, 52);
             this.panel2.TabIndex = 1;
             // 
             // txtUserName
             // 
             this.txtUserName.AutoSize = true;
             this.txtUserName.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(358, 13);
+            this.txtUserName.Location = new System.Drawing.Point(349, 11);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(86, 30);
             this.txtUserName.TabIndex = 0;
@@ -145,14 +149,14 @@
             this.pnChild.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnChild.Location = new System.Drawing.Point(200, 52);
             this.pnChild.Name = "pnChild";
-            this.pnChild.Size = new System.Drawing.Size(931, 519);
+            this.pnChild.Size = new System.Drawing.Size(966, 519);
             this.pnChild.TabIndex = 2;
             // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 571);
+            this.ClientSize = new System.Drawing.Size(1166, 571);
             this.Controls.Add(this.pnChild);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class PetDAO:DBConection
+    public class TypeDAO: DBConection
     {
-        public PetDAO()
+        public TypeDAO()
         {
 
         }
 
-        public DataTable GetPets()
+        public DataTable GetType()
         {
             DataTable result = new DataTable();
-            string sql = "SELECT P.[ID], P.[Name] AS Name, T.Name AS Type, [Price] FROM [dbo].[Pets] AS P JOIN Type AS T ON P.TypeID=T.ID ";
+            string sql = "SELECT ID, Name FROM Type";
             SqlCommand cmd = new SqlCommand(sql, conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             try
@@ -32,7 +32,7 @@ namespace DAO
             catch (Exception)
             {
 
-                throw new Exception("Error at GetPets");
+                throw new Exception("Error at GetType");
             }
             finally
             {
