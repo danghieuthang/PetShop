@@ -18,8 +18,9 @@ namespace DAO
         public DataTable GetOrderByUser(string userName)
         {
             DataTable result = new DataTable();
-            string sql = "SELECT";
+            string sql = "SELECT O.ID, P.Name AS Pet, O.Amount, O.TotalPrice FROM Orders AS O JOIN Pets AS P ON O.PetID=P.ID WHERE O.UserName=@UserName";
             SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@UserName", userName);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             try
             {

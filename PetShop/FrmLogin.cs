@@ -74,7 +74,7 @@ namespace PetShop
             UserDTO user = _userBUS.CheckLogin(txtID.Text, txtPassword.Text);
             if (user != null)
             {
-                _ = new FrmHome(user)
+                _ = new FrmHome(user, this)
                 {
                     Visible = true
                 };

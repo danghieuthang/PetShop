@@ -16,11 +16,12 @@ namespace PetShop
         private Form currentChildForm;
         private Button currentBtn;
         private UserDTO user;
+        private Form loginForm;
         public FrmHome()
         {
             InitializeComponent();
         }
-        public FrmHome(UserDTO user)
+        public FrmHome(UserDTO user, Form loginForm)
         {
             InitializeComponent();
             if (user != null)
@@ -28,6 +29,7 @@ namespace PetShop
                 this.user = user;
                 txtUserName.Text = "Welcome - " + user.FullName;
             }
+            this.loginForm = loginForm;
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -83,12 +85,17 @@ namespace PetShop
         private void btnHistory_Click(object sender, EventArgs e)
         {
             ClickNewBtn(btnHistory);
-            OpenChildForm(new FrmHistory());
+            OpenChildForm(new FrmHistory(user.UserName));
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            ClickNewBtn(btnLogout);
+            if (MessageBox.Show("Do you want to logout?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+            {
+                return;
+            }
+            loginForm.Visible = true;
+            this.Dispose();
         }
     }
 }
